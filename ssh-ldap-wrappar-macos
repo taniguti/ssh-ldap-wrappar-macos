@@ -1,5 +1,7 @@
 #!/bin/sh
 
+if [ "Darwin" != `uname -s` ]; then exit 1 ;fi  
+
 username=$1
 if [ ${username:-x} = x ]; then exit 1 ;fi
 
