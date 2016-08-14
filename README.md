@@ -13,3 +13,8 @@ Install two scripts 'ssh-ldap-wrappar-macos' and 'mkhome' under '/usr/local/bin'
 Edit sudoers file with visudo. Add a line as following.
 
     _sshd ALL=(ALL) NOPASSWD: /usr/local/bin/mkhome
+    
+----
+Search & Mappings
+Almost of OpenLDAP user attribute has user home directory pointing to /home. But macOS used to have under /Users.
+So you have to mapping 'dsAttrTypeStandard:NFSHomeDirectory' to '#/Users/$uid$'.
