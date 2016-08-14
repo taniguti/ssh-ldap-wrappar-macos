@@ -6,4 +6,4 @@ Bind your macOS computers to your OpenLDAP Directory Service.
 Then edit sshd_config as following and restart sshd on macOS computer.
 
     AuthorizedKeysCommand /usr/local/bin/ssh-ldap-wrappar-macos
-    AuthorizedKeysCommandUser nobody
+    AuthorizedKeysCommandUser _sshd
